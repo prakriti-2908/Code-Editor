@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+.editor-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+  height: 300px;
+  background-color: #282C34;
+  color: #ccc;
+  width: 30%;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editor-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.editor-container::-webkit-scrollbar-thumb {
+  background-color: #868686;
+  border-radius: 10px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor-container::-webkit-scrollbar-track {
+  background-color: #E4E4E4;
+  border-radius: 10px;
+}
+
+.editor-container::-webkit-scrollbar-thumb:hover {
+  background-color: #6c6c6c;
+}
+
+.editor-container {
+  scrollbar-width: thin;
+  scrollbar-color: #868686 #E4E4E4;
+}
+
+
+.editor-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0; /* Add this line */
+  background-color: #282C34; /* Optional: Ensure it has a background to avoid overlapping issues */
+  z-index: 1; /* Optional: Ensure it is above other content */
+}
+
+
+.top-pane{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-color: red; */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-pane{
+  height: 290px;
 }
